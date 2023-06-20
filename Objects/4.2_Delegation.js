@@ -38,7 +38,7 @@ We only have read access to parents and read and write access to self
  */
 
 /**
- * Existence
+ * Existence check
 
 Sometimes we don't care what value a property has. We ,
 only want to know whether the given object has the
