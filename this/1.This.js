@@ -2,7 +2,7 @@
 //cant say to just looking at This keyword work
 
 const obj = {
-  firstName: "Arfat",
+  firstName: "Mehul",
   print: function () {
     console.log(this.firstName);
   },
