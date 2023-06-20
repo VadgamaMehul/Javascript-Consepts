@@ -45,7 +45,10 @@ let obj1 = {
     [Symbol()] : 23
 };
 
-const keys = Object.keys(obj1); //object method its does not give parents key so recommeded
+//object method its does not give parents key so recommeded
+//it gives only string keys not gives symbol keys
+
+const keys = Object.keys(obj1); 
 const values = Object.values(obj1); //object method its does not give parents key so recommeded
 const enteris = Object.entries(obj1); //object method its does not give parents key so recommeded
 
