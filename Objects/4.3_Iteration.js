@@ -32,7 +32,7 @@ for( let key in obj){
     console.log(key,value); // it give 'name:mehul, id:18el004, num:12345, father:papa' // cant give symbol
 }
 
-//but for in is not recommeded to use bcs it also can access parent key too
+//but 'for in' is not recommeded to use bcs it also can access parent key too 
 // also order of key is not fix below ES6 vertion 
 
 
