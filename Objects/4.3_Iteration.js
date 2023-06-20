@@ -8,6 +8,7 @@
  * }
  * 
  * but for objacts we cant use normal for loop just like we did above
+ * bcs we dont have object length 
  * 
  * insted of using normal for loop we uses **'for in loop'**
  * 
