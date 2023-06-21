@@ -11,8 +11,8 @@
 * What is a Prototype: its a working object instance.
 * 
 * there are two prototypes on func.
-* 1.object which present in function
-* 2.Property which is refer to one obj which is perent to current obj
+* 1.object which present in function  =  .prototype
+* 2.Property which is refer to one obj which is perent to current obj = [[Prototype]]
 * 
 * Every object is born referencing to a prototype object(parent) by a secret property [[Prototype]] or _proto_.
 * Even whgn you don't specify the prototype, a default
@@ -41,6 +41,7 @@ console.log(obj.toString); // it gives 'function' not gives undefine bcs of dele
  * If the property doesn't exist, property is added to the object.
  * It won't look up to the prototype chain.
  * 
+ * create,Delete,update always effect current obj not effect of their prototype parant obj
  */
 
 const obj1 = {};
