@@ -2,7 +2,11 @@
  * any function which called with 'new' keyword is const. fn.
  * it create object
  * 
- * 
+ * When function excute with 'new' Keyword it does the following steps:
+ * 1. A new empty Obj is created and assing to the 'this'.
+ * 2. The prototype of the 'this' object is change to <fname>.prototype.
+ * 3. the func body executes. usually it modify 'this', add new properties to it
+ * 4. the value of this is returned.
  */
 
 //---------------------------------------------------------------------------------------------------------------------------
@@ -18,7 +22,7 @@ function c2(){
 }
 console.log(c()); // it will give undefine
 console.log(new c()); // it will give obj which has property a : 34
-console.log(new c2()); // it will give obj which has property a : 34
+console.log(new c2()); // it will give obj which has property a : 23 bcz of overriding here this.a = 34 but c2() return {a:23} so we will get {a:23}
 
 //-----------------------------------------------------------------------------------------------------------------
 console.log("-------------Pogramme 2------------");
@@ -41,10 +45,21 @@ function Person1(name, age) {
     //Object.setPrototypeOf(this, Person.prototype)
     this.age = age;
     this.name = name;
-    return 23; 
+    return 23; // here we return 23 but it wont return, bcz only Object return
 }
 
-console.log(new Person1('mehul', 12));
+console.log(new Person1('mehul', 12)); // it will give name : mehul , age : 12 
+
+function Personeee(name, age) {
+    //this = {}
+    //Object.setPrototypeOf(this, Person.prototype)
+    this.age = age;
+    this.name = name;
+    return {age : 23}; // here we return Obj {age : 23}
+}
+
+console.log(new Personeee('mehul', 12)); // it will give {age:23} 
+
 
 //------------------------------------------------------------------------------------------------------------------
 
