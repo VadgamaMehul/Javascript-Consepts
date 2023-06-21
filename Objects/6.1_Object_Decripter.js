@@ -73,7 +73,7 @@ const obj = {
 }
 
 /**
- * here x and y has 4 individual attribute prop
+ * here x and y has 4 individual data prop
  * 
  * x and y has:
  * [[value]] : 'a' and 'b'
@@ -83,7 +83,7 @@ const obj = {
  * 
  * these are internal prop we can modify directly 
  * 
- * Accessing Attributes Property
+ * Accessing data Property
  * we can use:
  * object.getOwnPropertyDescriptor/s to get abow prop info
  * 
