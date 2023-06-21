@@ -1,5 +1,5 @@
 /**
- * java is single threded
+ * javascript  is single threded
  * 
  * In JavaScript, a callback is simply a function that gets passed as an argument to another function 
  * and gets executed later on.
@@ -32,3 +32,22 @@ fs.readFile(__filename,(err,data) => {
     console.log(`data - ${data}`);
 });
 console.log("End");
+
+/**
+ * 
+Disadvantages of Callbacks :
+1.Readability
+--Pyramid of Doom/Callback Hell 
+2.Complexity
+--Non-sequential exeution
+3.Debugging
+--The callback is executed much later so the stack trace is different.
+4.loss of control flow
+--return doesnt return to the parent function
+5.loss of error handling
+--Exception wont caught by the parent function 
+6.sync/async ambiguity
+--cant say wether call back is working sync or async
+7.Harder to compose and modularization
+--doesnt do chaining 
+*/
