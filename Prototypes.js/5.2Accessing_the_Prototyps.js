@@ -1,5 +1,10 @@
-/**this all property for set obj as parent to currenty obj(child)
+/*in this we learn how to read,write,create and delete the prototype
+ * Technicly not possible to delete prototype but we can set it as null so Obj become prototype less.
+ *
+ * this all property for set obj as parent to currenty obj(child)
  * 
+ *->Accessing the prototype 
+ * 1)Object.getPrototypeOf()
  * 1. Object.setPrototypeOf(child_obj,Parant_obj); it will set parant_obj as prototyped
  * 2. child.__proto__ = parent; // not recommended
  * 3. var child = Object.create(parent); 
@@ -26,10 +31,14 @@ const child = {};
 // prperty 1. from above list
 Object.setPrototypeOf(child,parent); //we can use parent = null so its will not access global property like toString
 
+//Deleting the prototype (we cant delete prototype we can do just set it as null so it becomes prototype less)
+//Object.setPrototypeOf(child,Null); // it makes child obj prototype less/parant less ex. it gives error when we execute "console.log(child.toString));" this line
+
 
 console.log(child.getnum());
 
-
+/*
+* we can also 
 
 
 
