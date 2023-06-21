@@ -32,9 +32,10 @@ const obj = {
 
 Object.preventExtensions(obj); // it will protect obj to create new Property/Key we just modifie existing Key
 
-obj.a = 10;
-delete obj.a;
-console.log(obj);
+obj.a = 10; // modifie a:1 to a:10
+console.log(obj); // gives { a : 10 }
+delete obj.a; // delete 'a'
+console.log(obj); // gives {}
 obj.b = 1; // it gives error bcs of Object.preventExtensions(obj); error is 'Cannot add property b, object is not extensible'
 
 //-----------Sealing-----------
