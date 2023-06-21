@@ -30,9 +30,19 @@
  *  by the Promise.
  * 
  * @then
+ * ->it never called untill promise is setteled
+ * ->.then always return Promise
+ * ->so we can do chaining
  * ->Promise.prototype.then(agrue1 , argue2)
  * -argue1 : onfulfilled
  * -argue2 : onReject
+ * -  
+ * p.then(
+ *   //onfulfilled
+ *   (val) => console.log(`val - ${val}`), 
+ *   //onReject
+ *   (val) => console.error(`error - ${val}`) 
+ * );
  * 
  * The .then is executed only after a promise is resolved.
  * 
