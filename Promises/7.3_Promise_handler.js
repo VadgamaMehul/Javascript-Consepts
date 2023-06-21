@@ -15,6 +15,7 @@ p.then(console.log);
 
 //Problem code
 
+
 let a = new Promise((resolve,reject)=>{
     resolve(10);
     resolve(20);
