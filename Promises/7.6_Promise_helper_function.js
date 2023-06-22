@@ -55,10 +55,21 @@ Promise.race([sleep(3000, 'a'), sleep(2000 , 'b'), sleep(3500 , 'c')])
 /*******************Promise.allSettled(iterable)******************/
 
 Promise.allSettled([sleep(3000, 'a'), sleep(2000 , 'b'), sleep(3500 , 'c'),Promise.reject('reject')])
-.then(console.log);  //! b bcs here b resolve very first
+.then(console.log);  
+/**
+ * Output:
+[
+    { status: 'fulfilled', value: 'a' },
+    { status: 'fulfilled', value: 'b' },
+    { status: 'fulfilled', value: 'c' },
+    { status: 'rejected', reason: 'reject' }
+]
+
+*/
+
 
 
 /*******************Promise.any(iterable)******************/
 
 Promise.any([sleep(3000, 'a'), sleep(2000 , 'b'), sleep(3500 , 'c'),Promise.reject('reject')])
-.then(console.log);  //! b bcs here b resolve very first and it 
+.then(console.log).catch();  //! b bcs here b resolve very first and it gives after 4.5 sec
